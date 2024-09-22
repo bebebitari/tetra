@@ -23,6 +23,13 @@
             display: flex;
         }
 
+        /* @media (max-width: 800px) {
+            div.row2 {
+                flex-direction: column;
+                margin-bottom: 5%;
+            }
+        } */
+
         div.w3-mobile {
             margin: 5%;
         }
@@ -57,13 +64,47 @@
         ::-webkit-scrollbar {
             width: 0px;
         }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            /* margin: 20px; */
+        }
+
+        img {
+            max-width: 90%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        img.active {
+            transform: scale(1.5);
+            /* Збільшує картинку в 1.5 рази */
+        }
+
+        .info-text {
+            display: none;
+            /* Ховаємо текст за замовчуванням */
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .info-text.active {
+            display: block;
+            /* Показуємо текст при збільшенні картинки */
+        }
     </style>
 </head>
 
 <body style="background-color:rgb(35, 35, 35);">
     <div class="container">
         <div class="w3-mobile" align="center">
-            <a href="#R1"><img src="images/eec5e22b40153ae9a7c75a89da27648a.png" width="50%"></a>
+            <a href="#repertory"><img src="images/eec5e22b40153ae9a7c75a89da27648a.png" width="50%"></a>
         </div>
         <div class="row" align="center">
             <div class="col-sm-4">
@@ -89,18 +130,21 @@
             </div>
         </div>
     </div>
-    <div class="container" style="color:yellow;margin-top: 10%;"><p></p><p>Найближчі покази:</p>
-    <p></p>
-    <p>29.09 — Комета прилітає. 14:00, 16:00, вул. Гоголя, 11</p></div>
+    <div class="container" style="color:yellow;margin-top: 10%;">
+        <p></p>
+        <p>Найближчі покази:</p>
+        <p></p>
+        <p>29.09 — Комета прилітає. 14:00, 16:00, вул. Гоголя, 11</p>
+    </div>
     <!-- <div class="container" align="center">
         <div class="rep">
             <p id="R1">РЕПЕРТУАР</p>
         </div>
         <div class="row2">
-            <div><img src="images/df6959db24f4f9c3c7ca5a00649215b7.png" width="90%"></div>
-            <div><img src="images/1e5cc205702c2f68426ce2ead9fc0bf5.jpg" width="90%"></div>
-            <div><img src="images/e838d72a34e82b91c5cb08bb492fe340.png" width="90%"></div>
-            <div><img src="images/9d166a207b1a89ff98089ecef1f8c468.png" width="90%"></div>
+            <div><img src="images/df6959db24f4f9c3c7ca5a00649215b7.png" alt="Маленький принц" width="90%"></div>
+            <div><img src="images/1e5cc205702c2f68426ce2ead9fc0bf5.jpg" alt="Соляріс" width="90%"></div>
+            <div><img src="images/e838d72a34e82b91c5cb08bb492fe340.png" alt="Комета прилітає" width="90%"></div>
+            <div><img src="images/9d166a207b1a89ff98089ecef1f8c468.png" alt="Ім'я шепоче вітер" width="90%"></div>
         </div>
     </div> -->
     <div class="container" align="center">
@@ -110,14 +154,39 @@
                     <p class="white">РЕПЕРТУАР</p>
                 </div>
             </summary>
-            <div class="row2" id="R1">
-                <div><img src="images/df6959db24f4f9c3c7ca5a00649215b7.png" width="90%"></div>
+            <div class="row2" id="repertory">
+                <div class="image-container">
+                    <img class="image" src="images/df6959db24f4f9c3c7ca5a00649215b7.png" alt="Маленький принц"
+                        data-info="info1">
+                    <div id="info1" class="info-text">Маленький принц</div>
+                </div>
+
+                <div class="image-container">
+                    <img class="image" src="images/1e5cc205702c2f68426ce2ead9fc0bf5.jpg" alt="Соляріс"
+                        data-info="info2">
+                    <div id="info2" class="info-text">Соляріс</div>
+                </div>
+
+                <div class="image-container">
+                    <img class="image" src="images/e838d72a34e82b91c5cb08bb492fe340.png" alt="Комета прилітає"
+                        data-info="info3">
+                    <div id="info3" class="info-text">Комета прилітає</div>
+                </div>
+
+                <div class="image-container">
+                    <img class="image" src="images/9d166a207b1a89ff98089ecef1f8c468.png" alt="Ім'я шепоче вітер"
+                        data-info="info4">
+                    <div id="info4" class="info-text">Ім'я шепоче вітер</div>
+                </div>
+
+                <!-- <div><img src="images/df6959db24f4f9c3c7ca5a00649215b7.png" width="90%"></div>
                 <div><img src="images/1e5cc205702c2f68426ce2ead9fc0bf5.jpg" width="90%"></div>
                 <div><img src="images/e838d72a34e82b91c5cb08bb492fe340.png" width="90%"></div>
-                <div><img src="images/9d166a207b1a89ff98089ecef1f8c468.png" width="90%"></div>
+                <div><img src="images/9d166a207b1a89ff98089ecef1f8c468.png" width="90%"></div> -->
             </div>
         </details>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
