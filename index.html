@@ -20,7 +20,7 @@
         div.row2 {
             margin-top: 10%;
             margin-bottom: 5%;
-            display: flex;
+         /* display: flex; */
         }
 
         /* @media (max-width: 800px) {
@@ -68,17 +68,19 @@
         .image-container {
             position: relative;
             display: inline-block;
-            /* margin: 20px; */
+            margin-bottom: 2%;
         }
 
         img {
             max-width: 90%;
+            /* max-width: 100%; */
+            height: auto;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
 
         img.active {
-            transform: scale(1.5);
+            /* transform: scale(1.5);
             /* Збільшує картинку в 1.5 рази */
         }
 
@@ -98,6 +100,10 @@
             display: block;
             /* Показуємо текст при збільшенні картинки */
         }
+
+        /* .footer {
+            padding: 15px;
+        } */
     </style>
 </head>
 
@@ -130,12 +136,12 @@
             </div>
         </div>
     </div>
-    <!-- <div class="container" style="color:yellow;margin-top: 10%;">
+    <div class="container" style="color:yellow;margin-top: 10%;">
         <p></p>
         <p>Найближчі покази:</p>
         <p></p>
-        <p>28.03 — Комета прилітає. 10:00 та 12:00, вул. Гоголя, 11</p>
-    </div> -->
+        <p>12.04 — Комета прилітає. 11:00, вул. Гоголя, 11</p>
+    </div>
     <!-- <div class="container" align="center">
         <div class="rep">
             <p id="R1">РЕПЕРТУАР</p>
