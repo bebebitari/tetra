@@ -13,6 +13,12 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
         div.row {
             margin-top: 10%;
         }
@@ -101,10 +107,11 @@
             /* Показуємо текст при збільшенні картинки */
         }
 
-        div.footer {
-            position: absolute;
-            color: white;
-            bottom: 0;
+        footer {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            color: #fff;
         }
     </style>
 </head>
@@ -138,12 +145,12 @@
             </div>
         </div>
     </div>
-   <!-- <div class="container" style="color:yellow;margin-top: 10%;">
+    <!-- <div class="container" style="color:yellow;margin-top: 10%;">
         <p></p>
         <p>Найближчі покази:</p>
         <p></p>
-        <p>12.04 — Комета прилітає. 11:00, вул. Гоголя, 11</p>
-    </div>
+        <p>28.03 — Комета прилітає. 10:00 та 12:00, вул. Гоголя, 11</p>
+    </div> -->
     <!-- <div class="container" align="center">
         <div class="rep">
             <p id="R1">РЕПЕРТУАР</p>
@@ -201,6 +208,8 @@
         </details>
     </div>
     <script src="script.js"></script>
+    <footer>
+        <p>© 2025 ТО "Театр Тетра"</p>
+      </footer>
 </body>
-    <div id="fotter" align="center">2025 © ТО "Театр Тетра"</div>
 </html>
